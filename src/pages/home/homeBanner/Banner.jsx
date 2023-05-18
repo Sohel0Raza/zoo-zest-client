@@ -11,8 +11,8 @@ const Banner = () => {
         >
           <img src={football} className="w-full h-full" />
           <div className="absolute flex items-end left-0 top-0 h-full rounded-xl bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
-            <div className="text-white px-6 shadow-2xl space-y-5 md:p-10 md:ml-10">
-              <h2 className="text-xl md:text-5xl font-bold ">
+            <div className="text-white px-6 shadow-2xl md:space-y-5 md:p-10 md:ml-10">
+              <h2 className="text-xl md:text-5xl mb-5 md:mb-0  font-bold ">
                 Affordable Price <br /> For All Eequipment
               </h2>
               <p>
@@ -37,8 +37,8 @@ const Banner = () => {
         <div id="slide2" className="carousel-item relative w-full md:h-[600px]">
           <img src={cricket} className="w-full h-full " />
           <div className="absolute flex items-end left-0 top-0 h-full rounded-xl bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
-            <div className="text-white px-6 shadow-2xl space-y-5 md:p-10 md:ml-10">
-              <h2 className="text-xl md:text-5xl font-bold ">
+            <div className="text-white px-6 shadow-2xl md:space-y-5 md:p-10 md:ml-10">
+              <h2 className="text-xl mb-5 md:mb-0 md:text-5xl font-bold ">
                 Affordable Price <br /> For All Eequipment
               </h2>
               <p>
@@ -63,8 +63,8 @@ const Banner = () => {
         <div id="slide3" className="carousel-item relative w-full md:h-[600px]">
           <img src={basketball} className="w-full h-full" />
           <div className="absolute flex items-end left-0 top-0 h-full rounded-xl bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
-            <div className="text-white px-6 shadow-2xl space-y-5 md:p-10 md:ml-10">
-              <h2 className="text-xl md:text-5xl font-bold ">
+            <div className="text-white px-6 shadow-2xl md:space-y-5 md:p-10 md:ml-10">
+              <h2 className="text-xl md:text-5xl mb-5 md:mb-0 font-bold ">
                 Affordable Price <br /> For All Eequipment
               </h2>
               <p>

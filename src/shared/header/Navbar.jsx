@@ -1,10 +1,35 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../providers/Authprovider";
 
 const Navbar = () => {
-    const navItems = <>
-                <NavLink className={({isActive})=> isActive ? 'active' : 'default'} to="/">Home</NavLink>
-                <NavLink className={({isActive})=> isActive ? 'active' : 'default'} to="/blogs">Blogs</NavLink>
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = () =>{
+    logOut()
+    .then(()=>{
+
+    })
+    .catch(error=>{
+      console.log(error)
+    })
+    
+  }
+  const navItems = (
+    <>
+      <NavLink
+        className={({ isActive }) => (isActive ? "active" : "default")}
+        to="/"
+      >
+        Home
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "active" : "default")}
+        to="/blogs"
+      >
+        Blogs
+      </NavLink>
     </>
+  );
   return (
     <div>
       <div className="navbar bg-cyan-100">
@@ -30,18 +55,29 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 z"
             >
-             {navItems}
+              {navItems}
             </ul>
           </div>
-          <h2 className="normal-case text-xl md:text-2xl font-semibold md:font-bold md:ml-20"><span className="text-primary">Sport</span>Verse</h2>
+          <h2 className="normal-case text-xl md:text-2xl font-semibold md:font-bold md:ml-20">
+            <span className="text-primary">Sport</span>Verse
+          </h2>
         </div>
         <div className="navbar-center hidden lg:flex ">
-          <ul className="menu menu-horizontal px-1 space-x-7">
-            {navItems}
-          </ul>
+          <ul className="menu menu-horizontal px-1 space-x-7">{navItems}</ul>
         </div>
         <div className="navbar-end md:mr-20">
-          <Link><button className="btn-primary">Login</button></Link>
+          {user ? (
+          <>
+            <div className="h-10 w-10 mr-5 tooltip tooltip-left tooltip-primary"  data-tip={user.displayName}>
+              <img  className="h-full w-full rounded-full "src={user.photoURL} alt=""/>
+            </div>
+            <button onClick={handleLogOut} className="btn-primary">Sing Out</button>
+          </>
+          ) : (
+            <Link to="/login">
+              <button className="btn-primary">Login</button>
+            </Link>
+          )}
         </div>
       </div>
     </div>
