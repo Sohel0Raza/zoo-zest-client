@@ -8,9 +8,10 @@ import brand5 from "../../../assets/brand/new-balance-2-logo-png-transparent.png
 import brand6 from "../../../assets/brand/nike-logo-black-with-name-clothes-design-icon-abstract-football-illustration-with-white-background-free-vector.jpg";
 const ShopBrand = () => {
   return (
-    <div className="my-10">
+    <div className="my-10 md:w-10/12 mx-auto  ">
       <h2 className="font-thin text-center text-3xl">SHOP BRANDS</h2>
-      <div className="md:w-10/12 mx-auto  grid grid-cols-1 md:grid-cols-3 gap-5 my-10">
+      <hr className="h-1 mb-5 mt-3 w-2/6 bg-amber-500 mx-auto" />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 my-10">
         <div className="w-44 h-40 mx-auto">
         <a href="">  <img className="w-full h-full" src={brand1} alt="" /></a>
         </div>
