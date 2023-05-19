@@ -1,4 +1,4 @@
-import logo from '../../assets/Sport_balls.svg.png'
+import logo from '../../assets/banner/logo.png'
 const Footer = () => {
   return (
     <footer className="footer p-10 bg-neutral text-neutral-content">
@@ -7,7 +7,7 @@ const Footer = () => {
         <img className='h-full w-full' src={logo} alt="" />
         </div>
         <p>
-          SportyVerse
+        ZooZest
           <br />
           Providing reliable equipment since 1990
         </p>

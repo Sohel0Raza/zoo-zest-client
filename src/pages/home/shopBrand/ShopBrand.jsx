@@ -1,11 +1,11 @@
 
 
-import brand1 from "../../../assets/brand/adidas-logo-symbol-clothes-design-icon-abstract-football-illustration-free-vector.webp";
-import brand2 from "../../../assets/brand/download (1).png";
+import brand1 from "../../../assets/brand/0078436929027.webp";
+import brand2 from "../../../assets/brand/download.png";
 import brand3 from "../../../assets/brand/download.jpg";
-import brand4 from "../../../assets/brand/download.png";
-import brand5 from "../../../assets/brand/new-balance-2-logo-png-transparent.png";
-import brand6 from "../../../assets/brand/nike-logo-black-with-name-clothes-design-icon-abstract-football-illustration-with-white-background-free-vector.jpg";
+import brand4 from "../../../assets/brand/download (2).png";
+import brand5 from "../../../assets/brand/download (1).png";
+import brand6 from "../../../assets/brand/brand_banner_logo_hartz_400x300.webp";
 const ShopBrand = () => {
   return (
     <div className="my-10 md:w-10/12 mx-auto  ">
@@ -19,10 +19,10 @@ const ShopBrand = () => {
         <a href="">  <img className="w-full h-full" src={brand2} alt="" /></a>
         </div>
         <div className="w-44 h-40 mx-auto">
-        <a href="">  <img className="w-full h-full" src={brand3} alt="" /></a>
+        <a href="">  <img className="w-full h-full" src={brand4} alt="" /></a>
         </div>
         <div className="w-44 h-40 mx-auto">
-        <a href="">  <img className="w-full h-full" src={brand4} alt="" /></a>
+        <a href="">  <img className="w-full h-full" src={brand3} alt="" /></a>
         </div>
         <div className="w-44 h-40 mx-auto">
         <a href="">  <img className="w-full h-full" src={brand5} alt="" /></a>
