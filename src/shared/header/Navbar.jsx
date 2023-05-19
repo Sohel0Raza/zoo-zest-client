@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/Authprovider";
-
+import logo from "../../assets/Sport_balls.svg.png";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const handleLogOut = () =>{
@@ -58,7 +58,10 @@ const Navbar = () => {
               {navItems}
             </ul>
           </div>
-          <h2 className="normal-case text-xl md:text-2xl font-semibold md:font-bold md:ml-20">
+          <div className="navbar-center w-3 h-3 md:w-12 md:h-12 rounded-lg md:ml-20 mr-2">
+          <img src={logo} alt="" />
+          </div>
+          <h2 className="normal-case text-xl md:text-2xl font-semibold md:font-bold ">
             <span className="text-primary">Sport</span>Verse
           </h2>
         </div>

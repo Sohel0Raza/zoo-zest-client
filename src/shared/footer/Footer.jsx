@@ -2,7 +2,7 @@ import logo from '../../assets/Sport_balls.svg.png'
 const Footer = () => {
   return (
     <footer className="footer p-10 bg-neutral text-neutral-content">
-      <div>
+      <div className='md:ml-20'>
         <div className='w-16 h-16'>
         <img className='h-full w-full' src={logo} alt="" />
         </div>

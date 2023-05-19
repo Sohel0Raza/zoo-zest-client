@@ -9,11 +9,11 @@
     @apply font-medium text-gray-700 transition-colors duration-200 hover:text-cyan-600
   }
   .btn-primary{
-    @apply md:mb-0  px-2 md:px-8 md:py-2 text-lg rounded  text-white bg-amber-500 hover:bg-cyan-700
+    @apply md:mb-0  px-4 md:px-8 md:py-2 text-lg rounded  text-white bg-amber-500 hover:bg-cyan-700
   }
   .btn-secondary{
     @apply md:mb-0  px-8 py-1 md:px-8 md:py-2 m-5 text-lg rounded-full  text-white bg-sky-700 hover:bg-cyan-500
   }
   .btn-outlined{
-    @apply  font-medium  transition duration-200  shadow-md  md:mb-0  px-1 py-1 md:px-8 md:py-2 text-lg rounded  text-gray-700 bg-cyan-100 hover:bg-amber-400 hover:border-transparent border-2 border-amber-200 hover:text-white
+    @apply  font-medium  transition duration-200  shadow-md  md:mb-0  px-4 py-1 md:px-8 md:py-2 text-lg rounded  text-gray-700 bg-cyan-100 hover:bg-amber-400 hover:border-transparent border-2 border-amber-200 hover:text-white
   }
