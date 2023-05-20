@@ -4,6 +4,8 @@ import Home from "../pages/home/Home";
 import Login from "../pages/login/Login";
 import SingUp from "../pages/singup/SingUp";
 import ErrorPage from "../pages/errorPage/ErrorPage";
+import AddToy from "../pages/addToy/AddToy";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -14,6 +16,10 @@ const router = createBrowserRouter([
             {
                 path:'/',
                 element:<Home/>
+            },
+            {
+                path:'/addToy',
+                element:<PrivateRoute><AddToy/></PrivateRoute>
             },
             {
                 path:'/login',

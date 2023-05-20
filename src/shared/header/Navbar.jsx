@@ -24,6 +24,12 @@ const Navbar = () => {
       </NavLink>
       <NavLink
         className={({ isActive }) => (isActive ? "active" : "default")}
+        to="/addToy"
+      >
+        Add Toy
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "active" : "default")}
         to="/blogs"
       >
         Blogs
