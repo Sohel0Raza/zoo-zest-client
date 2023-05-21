@@ -44,7 +44,7 @@ const AddToy = () => {
   }
   return (
     <div className="md:w-10/12 mx-auto my-10">
-      <h2 className="font-thin text-center text-3xl">ADD YOUR TOY</h2>
+      <h2 className="font-thin text-center text-3xl">ADD NEW TOY</h2>
       <hr className="h-1 mb-5 mt-3 w-2/6 bg-amber-500 mx-auto" />
       <form onSubmit={handleAddToy} className=" bg-slate-100 p-2 md:p-5 rounded-lg">
         <div className="md:flex">
@@ -56,8 +56,9 @@ const AddToy = () => {
               <input
                 type="text"
                 name="sellerName"
-                defaultValue={user?.name}
+                defaultValue={user?.displayName}
                 className="input input-bordered"
+                required
               />
             </div>
             <div className="form-control">
@@ -69,6 +70,7 @@ const AddToy = () => {
                 name="email"
                 defaultValue={user?.email}
                 className="input input-bordered"
+                required
               />
             </div>
             <div className="form-control">
@@ -80,6 +82,7 @@ const AddToy = () => {
                 name="category"
                 placeholder="Teddy or horse or dinosaur"
                 className="input input-bordered"
+                required
               />
             </div>
             <div className="form-control">
@@ -91,6 +94,7 @@ const AddToy = () => {
                 name="description"
                 placeholder="Detail description"
                 className="input input-bordered"
+                required
               />
             </div>
           </div>
@@ -104,6 +108,7 @@ const AddToy = () => {
                 name="toyName"
                 placeholder="Toy name"
                 className="input input-bordered"
+                required
               />
             </div>
             <div className="form-control">
@@ -115,6 +120,7 @@ const AddToy = () => {
                 name="price"
                 placeholder="price"
                 className="input input-bordered"
+                required
               />
             </div>
             <div className="form-control">
@@ -126,6 +132,7 @@ const AddToy = () => {
                 name="quantity"
                 placeholder="Quantity"
                 className="input input-bordered"
+                required
               />
             </div>
             <div className="form-control">
@@ -137,6 +144,7 @@ const AddToy = () => {
                 name="rating"
                 placeholder="Rating"
                 className="input input-bordered"
+                required
               />
             </div>
           </div>
@@ -150,6 +158,7 @@ const AddToy = () => {
             name="photo"
             placeholder="Photo url"
             className="input input-bordered"
+            required
           />
         </div>
         <div className="form-control px-5 mt-8">

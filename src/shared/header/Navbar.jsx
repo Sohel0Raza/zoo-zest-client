@@ -4,16 +4,13 @@ import { AuthContext } from "../../providers/Authprovider";
 import logo from "../../assets/banner/logo.png";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  const handleLogOut = () =>{
+  const handleLogOut = () => {
     logOut()
-    .then(()=>{
-
-    })
-    .catch(error=>{
-      console.log(error)
-    })
-    
-  }
+      .then(() => {})
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   const navItems = (
     <>
       <NavLink
@@ -28,12 +25,20 @@ const Navbar = () => {
       >
         All Toy
       </NavLink>
+     { user ? <>
       <NavLink
         className={({ isActive }) => (isActive ? "active" : "default")}
         to="/addToy"
       >
         Add Toy
       </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "active" : "default")}
+        to="/myToy"
+      >
+        My Toys
+      </NavLink>
+     </> : ''}
       <NavLink
         className={({ isActive }) => (isActive ? "active" : "default")}
         to="/blogs"
@@ -71,7 +76,7 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="navbar-center w-3 h-3 md:w-12 md:h-12 rounded-lg md:ml-20 mr-2">
-          <img src={logo} alt="" />
+            <img src={logo} alt="" />
           </div>
           <h2 className="normal-case text-xl md:text-2xl font-semibold md:font-bold ">
             <span className="text-primary">Zoo</span>Zest
@@ -82,12 +87,24 @@ const Navbar = () => {
         </div>
         <div className="navbar-end md:mr-20">
           {user ? (
-          <>
-            <div className="h-10 w-10 mr-5 tooltip tooltip-left tooltip-primary"  data-tip={user.displayName}>
-              <img  className="h-full w-full rounded-full "src={user.photoURL} alt=""/>
-            </div>
-           <Link to="/login"> <button onClick={handleLogOut} className="btn-primary">Sing Out</button></Link>
-          </>
+            <>
+              <div
+                className="h-10 w-10 mr-5 tooltip tooltip-left tooltip-primary"
+                data-tip={user.displayName}
+              >
+                <img
+                  className="h-full w-full rounded-full "
+                  src={user.photoURL}
+                  alt=""
+                />
+              </div>
+              <Link to="/login">
+                {" "}
+                <button onClick={handleLogOut} className="btn-primary">
+                  Sing Out
+                </button>
+              </Link>
+            </>
           ) : (
             <Link to="/login">
               <button className="btn-primary">Login</button>
