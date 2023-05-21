@@ -18,15 +18,15 @@ const MyToy = ({ toy, myToys, setMyToys }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/toys/${_id}`, {
+        fetch(`https://sports-verse-toys-server.vercel.app/toys/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
               Swal.fire("Deleted!", "Your file has been deleted.", "success");
-              const remaining = myToys.filter(toy=> toy._id !== _id)
-              setMyToys(remaining)
+              const remaining = myToys.filter((toy) => toy._id !== _id);
+              setMyToys(remaining);
             }
           });
       }
@@ -46,11 +46,16 @@ const MyToy = ({ toy, myToys, setMyToys }) => {
               <FcViewDetails />
             </button>
           </Link>
-         <Link to={`/updateToy/${_id}`}> <button className="p-1 rounded-md hover:btn-accent">
-            <GrUpdate />
-          </button>
+          <Link to={`/updateToy/${_id}`}>
+            {" "}
+            <button className="p-1 rounded-md hover:btn-accent">
+              <GrUpdate />
+            </button>
           </Link>
-          <button onClick={()=> handleDetete(_id)} className="p-1 rounded-md hover:btn-error">
+          <button
+            onClick={() => handleDetete(_id)}
+            className="p-1 rounded-md hover:btn-error"
+          >
             <AiFillDelete />
           </button>
         </div>

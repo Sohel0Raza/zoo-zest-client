@@ -12,47 +12,65 @@ import MyToys from "../pages/myToy/MyToys";
 import UpdateToy from "../pages/myToy/UpdateToy";
 
 const router = createBrowserRouter([
-    {
-        path:'/',
-        element:<Main/>,
-        errorElement:<ErrorPage/>,
-        children:[
-            {
-                path:'/',
-                element:<Home/>
-            },
-            {
-                path:'/addToy',
-                element:<PrivateRoute><AddToy/></PrivateRoute>
-            },
-            {
-                path:'/myToy',
-                element:<PrivateRoute><MyToys/></PrivateRoute>
-            },
-            {
-                path:'/allToy',
-                element:<AllToy/>,
-                loader: ()=> fetch('http://localhost:5000/toys')
-            },
-            {
-                path:'/toys/:id',
-                element:<PrivateRoute><Toy/></PrivateRoute>,
-                loader: ({params})=> fetch(`http://localhost:5000/toys/${params.id}`)
-            },
-            {
-                path:'/updateToy/:id',
-                element:<UpdateToy/>,
-                loader: ({params})=> fetch(`http://localhost:5000/toys/${params.id}`)
-            },
-            {
-                path:'/login',
-                element:<Login/>
-            },
-            {
-                path:'/singup',
-                element:<SingUp/>
-            }
-        ]
-    }
-])
+  {
+    path: "/",
+    element: <Main />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/addToy",
+        element: (
+          <PrivateRoute>
+            <AddToy />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/myToy",
+        element: (
+          <PrivateRoute>
+            <MyToys />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/allToy",
+        element: <AllToy />,
+        loader: () => fetch("https://sports-verse-toys-server.vercel.app/toys"),
+      },
+      {
+        path: "/toys/:id",
+        element: (
+          <PrivateRoute>
+            <Toy />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://sports-verse-toys-server.vercel.app/toys/${params.id}`
+          ),
+      },
+      {
+        path: "/updateToy/:id",
+        element: <UpdateToy />,
+        loader: ({ params }) =>
+          fetch(
+            `https://sports-verse-toys-server.vercel.app/toys/${params.id}`
+          ),
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/singup",
+        element: <SingUp />,
+      },
+    ],
+  },
+]);
 export default router;

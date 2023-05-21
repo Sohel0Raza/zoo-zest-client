@@ -1,12 +1,16 @@
 import Lottie from "lottie-react";
 import animationData from "../../../public/124956-login.json";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/Authprovider";
 
 const Login = () => {
     const {singIn, signInWithGoogle} = useContext(AuthContext)
+    const location = useLocation()
+    const navigate = useNavigate()
+
+    const from = location.state?.from?.pathname || '/'
 
     const handleLogin = event =>{
         event.preventDefault()
@@ -17,7 +21,6 @@ const Login = () => {
        singIn(email, password)
        .then(result=>{
         const loginUser = result.user;
-        console.log(loginUser)
         form.reset()
         if(loginUser){
             Swal.fire({
@@ -27,7 +30,8 @@ const Login = () => {
                 showConfirmButton: false,
                 timer: 1500
               })                  
-        }
+            }
+            navigate(from, {replace: true})
        })
        .catch(error=>{
         form.reset()
@@ -56,6 +60,7 @@ const Login = () => {
                     timer: 1500
                   })                  
             }
+            navigate(from, {replace: true})
         })
         .catch(error=>{
             if(error){
