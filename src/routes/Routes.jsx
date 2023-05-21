@@ -10,6 +10,7 @@ import AllToy from "../pages/allToy/AllToy";
 import Toy from "../pages/allToy/Toy";
 import MyToys from "../pages/myToy/MyToys";
 import UpdateToy from "../pages/myToy/UpdateToy";
+import Blogs from "../pages/blogs/Blogs";
 
 const router = createBrowserRouter([
   {
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
       {
         path: "/singup",
         element: <SingUp />,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs />,
       },
     ],
   },
