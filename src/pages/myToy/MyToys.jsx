@@ -33,6 +33,8 @@ const MyToys = () => {
             myToys.map(toy=> <MyToy 
             key={toy._id}
             toy={toy}
+            myToys={myToys}
+            setMyToys={setMyToys}
             ></MyToy>)
            }
           </table>
