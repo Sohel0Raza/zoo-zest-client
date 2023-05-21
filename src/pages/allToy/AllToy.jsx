@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../providers/Authprovider";
+import useTitle from "../../hooks/useTitle";
 
 const AllToy = () => {
   const { user } = useContext(AuthContext);
   const allToy = useLoaderData();
+  useTitle('AllToy')
   return (
     <div className="md:w-10/12 mx-auto my-10 px-5 md:px-0">
       <h2 className="font-thin text-center text-3xl">ALL TOY</h2>

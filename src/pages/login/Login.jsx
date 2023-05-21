@@ -4,12 +4,13 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/Authprovider";
+import useTitle from "../../hooks/useTitle";
 
 const Login = () => {
     const {singIn, signInWithGoogle} = useContext(AuthContext)
     const location = useLocation()
     const navigate = useNavigate()
-
+    useTitle('Login')
     const from = location.state?.from?.pathname || '/'
 
     const handleLogin = event =>{

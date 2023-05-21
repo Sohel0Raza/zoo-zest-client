@@ -5,9 +5,11 @@ import { useContext } from "react";
 import { AuthContext } from "../../providers/Authprovider";
 import Swal from "sweetalert2";
 import { updateProfile } from "firebase/auth";
+import useTitle from "../../hooks/useTitle";
 
 const SingUp = () => {
   const { createUser } = useContext(AuthContext);
+  useTitle('SingUp')
   const handleSingUp = (event) => {
     event.preventDefault();
     const form = event.target;
