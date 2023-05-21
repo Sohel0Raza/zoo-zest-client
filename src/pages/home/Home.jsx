@@ -1,3 +1,4 @@
+import AboutUs from "./aboutUs/AboutUs";
 import Banner from "./homeBanner/Banner";
 import ShopBrand from "./shopBrand/shopBrand";
 import ShopCategory from "./shopCategory/ShopCategory";
@@ -9,6 +10,7 @@ const Home = () => {
             <ShopCategory/>
            <ShopBrand/>
            <ShopGallery/>
+           <AboutUs/>
         </div>
     );
 };

@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../providers/Authprovider";
 
 const AllToy = () => {
+  const { user } = useContext(AuthContext);
   const allToy = useLoaderData();
   return (
     <div className="md:w-10/12 mx-auto my-10 px-5 md:px-0">
@@ -28,7 +31,17 @@ const AllToy = () => {
                   <td>{toy.category}</td>
                   <td>$ {toy.price}</td>
                   <td>{toy.quantity}</td>
-                  <Link to={`/toys/${toy._id}`}><button className="btn-secondary">View Detail</button> </Link>
+                  {user ? (
+                    <>
+                      <Link to={`/toys/${toy._id}`}>
+                        <button className="btn-secondary">View Detail</button>{" "}
+                      </Link>
+                    </>
+                  ) : (
+                    <Link to="/login">
+                      <button className="btn-secondary">View Detail</button>{" "}
+                    </Link>
+                  )}
                 </tr>
               </tbody>
             );
