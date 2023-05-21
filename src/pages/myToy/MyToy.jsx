@@ -46,9 +46,10 @@ const MyToy = ({ toy, myToys, setMyToys }) => {
               <FcViewDetails />
             </button>
           </Link>
-          <button className="p-1 rounded-md hover:btn-accent">
+         <Link to={`/updateToy/${_id}`}> <button className="p-1 rounded-md hover:btn-accent">
             <GrUpdate />
           </button>
+          </Link>
           <button onClick={()=> handleDetete(_id)} className="p-1 rounded-md hover:btn-error">
             <AiFillDelete />
           </button>
