@@ -1,13 +1,13 @@
-import logo from '../../assets/banner/logo.png'
+import logo from "../../assets/banner/logo.png";
 const Footer = () => {
   return (
     <footer className="footer p-10 bg-neutral text-neutral-content">
-      <div className='md:ml-20'>
-        <div className='w-16 h-16'>
-        <img className='h-full w-full' src={logo} alt="" />
+      <div className="md:ml-20">
+        <div className="w-16 h-16">
+          <img className="h-full w-full" src={logo} alt="" />
         </div>
-        <p>
-        ZooZest
+        <p className="uppercase">
+          Kiddie Craft
           <br />
           Providing reliable equipment since 1990
         </p>

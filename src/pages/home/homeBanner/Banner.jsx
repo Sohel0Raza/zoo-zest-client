@@ -1,4 +1,3 @@
-import taddy1 from "../../../../src/assets/banner/istockphoto-1193569086-612x612 (2).jpg";
 const Banner = () => {
   return (
     <div>
