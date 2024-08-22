@@ -1,7 +1,7 @@
 import logo from "../../assets/banner/logo.png";
 const Footer = () => {
   return (
-    <footer className="footer p-10 bg-neutral text-neutral-content">
+    <footer className="footer bg-gradient-to-t from-[#348691] to-[#215056] text-gray-200 py-10">
       <div className="md:ml-20">
         <div className="w-16 h-16">
           <img className="h-full w-full" src={logo} alt="" />

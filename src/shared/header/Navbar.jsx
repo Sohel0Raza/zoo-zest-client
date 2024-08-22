@@ -86,7 +86,7 @@ const Navbar = () => {
             <img src={logo} alt="" />
           </div>
           <h2 className="text-xl font-semibold md:font-bold uppercase">
-            <span className="">Kiddie</span> Craft
+            <span className="text-[#ffa791]">Kiddie</span> Craft
           </h2>
         </div>
         <div className="navbar-center hidden lg:flex ">

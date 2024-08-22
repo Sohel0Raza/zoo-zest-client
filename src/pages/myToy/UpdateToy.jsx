@@ -40,7 +40,7 @@ const UpdateToy = () => {
   return (
     <div className="md:w-10/12 mx-auto my-10 p-5">
       <h2 className="font-thin text-center text-3xl">{toy.toyName}</h2>
-      <hr className="h-1 mb-5 mt-3 w-2/6 bg-amber-500 mx-auto" />
+      <hr className="h-1 mb-5 mt-3 w-2/6 bg-[#ffa791] mx-auto" />
       <form onSubmit={handleUpdateToy}>
         <div className="form-control">
           <label className="label">

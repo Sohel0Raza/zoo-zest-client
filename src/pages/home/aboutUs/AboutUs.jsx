@@ -1,6 +1,6 @@
 const AboutUs = () => {
   return (
-    <div className="md:flex justify-center items-center md:mt-28 my-10 bg-[#215056] p-5">
+    <div className="md:flex justify-center items-center md:mt-28 mt-10 bg-[#215056] p-5 border-b-2 border-[#f0e4e1] ">
       <div className="md:w-1/2 text-center text-gray-200 p-2">
         <h3 className="font-mono text-2xl">About Us</h3>
         <h1 className="font-serif font-bold text-2xl p-2">Kiddie Craft Toys</h1>

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 .active{
-    @apply font-medium uppercase tracking-wide text-[#ff648b] duration-200
+    @apply font-medium uppercase tracking-wide text-[#ffa791] duration-200
   }
   
   .default{
@@ -12,7 +12,7 @@
     @apply md:mb-0 py-1 px-4 md:px-8 md:py-2 text-lg rounded shadow-inner shadow-black  text-white bg-[#d42551] hover:bg-[#e9436c] active:scale-95
   }
   .btn-secondary{
-    @apply md:mb-0  px-2 py-1 md:px-4 md:py-1 m-3 text-xs rounded-full  text-white bg-cyan-500 hover:bg-amber-500
+    @apply md:mb-0  px-2 py-1 md:px-4 md:py-1 m-3 text-xs rounded-full  text-white bg-cyan-500 hover:bg-[#ffa791]
   }
   .btn-outlined{
     @apply transition duration-200  shadow-xl shadow-black md:mb-0  px-2 py-1 md:px-6 md:py-2 rounded text-white hover:bg-amber-400 hover:border-transparent border-2 border-[#0a0a0a]

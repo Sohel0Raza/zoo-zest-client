@@ -1,9 +1,9 @@
 
 const ShopBrand = () => {
   return (
-    <div className="my-10 md:w-10/12 mx-auto  ">
+    <div className="my-10 md:w-10/12 mx-auto">
       <h2 className="font-thin text-center text-3xl">SHOP BRANDS</h2>
-      <hr className="h-1 mb-5 mt-3 w-2/6 bg-amber-500 mx-auto" />
+      <hr className="h-1 mb-5 mt-3 w-2/6 bg-[#ffa791] mx-auto" />
       <div className="grid grid-cols-1 md:grid-cols-4 gap-5 my-10">
         <div className="w-44 h-40 mx-auto">
           <a href="">

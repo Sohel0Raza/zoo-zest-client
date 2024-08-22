@@ -33,7 +33,7 @@ const ShopCategory = () => {
   return (
     <div className="my-10 md:w-10/12 mx-auto p-3">
       <h2 className="font-thin text-center text-3xl">SHOP BY CATEGORY</h2>
-      <hr className="h-1 mb-5 md:mb-10 mt-3 w-2/6 bg-amber-500 mx-auto" />
+      <hr className="h-1 mb-5 md:mb-10 mt-3 w-2/6 bg-[#ffa791] mx-auto" />
       <Tabs>
         <TabList className="bg-slate-300 p-3 font-bold md:space-x-10 text-center">
           <Tab>Teddy Bear</Tab>
