@@ -32,7 +32,7 @@ const ShopBrand = () => {
         </div>
       </div>
       <div className="text-center">
-      <button className="btn-outlined ">Shop All Brand</button>
+      <button className="btn-primary ">Shop All Brand</button>
       </div>
     </div>
   );

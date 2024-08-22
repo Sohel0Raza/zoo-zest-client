@@ -4,7 +4,7 @@ import Footer from "../shared/footer/Footer";
 
 const Main = () => {
   return (
-    <div>
+    <div className="bg-[#eeeded]">
       <Navbar />
       <div className="md:min-h-[calc(100vh-190px)]">
         <Outlet />

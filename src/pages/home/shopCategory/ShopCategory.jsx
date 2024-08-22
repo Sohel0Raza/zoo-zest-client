@@ -8,7 +8,7 @@ const ShopCategory = () => {
   const [teddys, setTeddys] = useState([]);
 
   useEffect(() => {
-    fetch("https://sports-verse-toys-server.vercel.app/category/teddy")
+    fetch("http://localhost:5000/category/teddy")
       .then((res) => res.json())
       .then((data) => setTeddys(data));
   }, []);
@@ -17,7 +17,7 @@ const ShopCategory = () => {
   const [horses, setHorses] = useState([]);
 
   useEffect(() => {
-    fetch("https://sports-verse-toys-server.vercel.app/category/horse")
+    fetch("http://localhost:5000/category/horse")
       .then((res) => res.json())
       .then((data) => setHorses(data));
   }, []);
@@ -26,7 +26,7 @@ const ShopCategory = () => {
   const [dinosaurs, setDinosaurs] = useState([]);
 
   useEffect(() => {
-    fetch("https://sports-verse-toys-server.vercel.app/category/dinosaur")
+    fetch("http://localhost:5000/category/dinosaur")
       .then((res) => res.json())
       .then((data) => setDinosaurs(data));
   }, []);

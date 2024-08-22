@@ -43,7 +43,7 @@ const AddToy = () => {
     };
 
     //send data to server
-    fetch("https://sports-verse-toys-server.vercel.app/toys", {
+    fetch("http://localhost:5000/toys", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -189,7 +189,7 @@ const AddToy = () => {
           <input
             type="submit"
             value="Add Toy"
-            className="btn-outlined w-full"
+            className="btn-primary w-full"
           />
         </div>
       </form>

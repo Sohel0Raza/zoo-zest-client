@@ -123,7 +123,7 @@ const Login = () => {
           </div>
           <hr  className="mt-5 "/>
           <p className="text-center font-bold">or</p>
-          <button onClick={handleLoginGoogle} className="btn-outlined">Login with Google</button>
+          <button onClick={handleLoginGoogle} className="btn-primary">Login with Google</button>
           <p className="mt-5">New to SportVerse? please <Link to="/singup"><span className="font-bold text-orange-600">Sing Up</span></Link></p>
         </form>
       </div>

@@ -17,7 +17,7 @@ const UpdateToy = () => {
     const updatedToy = { price, quantity, description };
 
     //send data to server
-    fetch(`https://sports-verse-toys-server.vercel.app/toys/${_id}`, {
+    fetch(`http://localhost:5000/toys/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -82,7 +82,7 @@ const UpdateToy = () => {
           <input
             type="submit"
             value="Update Toy"
-            className="btn-outlined w-full"
+            className="btn-primary w-full"
           />
         </div>
       </form>

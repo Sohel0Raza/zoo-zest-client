@@ -2,18 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 .active{
-    @apply font-medium tracking-wide text-primary transition-colors duration-200
+    @apply font-medium uppercase tracking-wide text-[#ff648b] duration-200
   }
   
   .default{
-    @apply font-medium text-gray-700 transition-colors duration-200 hover:text-cyan-600
+    @apply font-medium uppercase text-gray-700 transition-colors duration-200 hover:text-gray-600
   }
   .btn-primary{
-    @apply md:mb-0 py-1 px-4 md:px-8 md:py-2 text-lg rounded  text-white bg-amber-500 hover:bg-cyan-700
+    @apply md:mb-0 py-1 px-4 md:px-8 md:py-2 text-lg rounded shadow-inner shadow-black  text-white bg-[#d42551] hover:bg-[#e9436c] active:scale-95
   }
   .btn-secondary{
     @apply md:mb-0  px-2 py-1 md:px-4 md:py-1 m-3 text-xs rounded-full  text-white bg-cyan-500 hover:bg-amber-500
   }
   .btn-outlined{
-    @apply  font-medium  transition duration-200  shadow-md  md:mb-0  px-4 py-1 md:px-8 md:py-2 text-lg rounded  text-gray-700 bg-cyan-100 hover:bg-amber-400 hover:border-transparent border-2 border-amber-200 hover:text-white
+    @apply transition duration-200  shadow-xl shadow-black md:mb-0  px-2 py-1 md:px-6 md:py-2 rounded text-white hover:bg-amber-400 hover:border-transparent border-2 border-[#0a0a0a]
   }

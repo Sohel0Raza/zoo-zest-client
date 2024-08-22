@@ -2,6 +2,9 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/Authprovider";
 import logo from "../../assets/banner/logo.png";
+import { FaRegUser } from "react-icons/fa";
+import { MdOutlineLogout } from "react-icons/md";
+
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const handleLogOut = () => {
@@ -25,20 +28,24 @@ const Navbar = () => {
       >
         All Toy
       </NavLink>
-     { user ? <>
-      <NavLink
-        className={({ isActive }) => (isActive ? "active" : "default")}
-        to="/addToy"
-      >
-        Add Toy
-      </NavLink>
-      <NavLink
-        className={({ isActive }) => (isActive ? "active" : "default")}
-        to="/myToy"
-      >
-        My Toys
-      </NavLink>
-     </> : ''}
+      {user ? (
+        <>
+          <NavLink
+            className={({ isActive }) => (isActive ? "active" : "default")}
+            to="/addToy"
+          >
+            Add Toy
+          </NavLink>
+          <NavLink
+            className={({ isActive }) => (isActive ? "active" : "default")}
+            to="/myToy"
+          >
+            My Toys
+          </NavLink>
+        </>
+      ) : (
+        ""
+      )}
       <NavLink
         className={({ isActive }) => (isActive ? "active" : "default")}
         to="/blogs"
@@ -49,7 +56,7 @@ const Navbar = () => {
   );
   return (
     <div>
-      <div className="navbar bg-cyan-100">
+      <div className="navbar bg-[#eeeded] shadow-2xl fixed z-30">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -78,8 +85,8 @@ const Navbar = () => {
           <div className="navbar-center w-3 h-3 md:w-12 md:h-12 rounded-lg md:ml-20 mr-2">
             <img src={logo} alt="" />
           </div>
-          <h2 className="normal-case text-xl md:text-2xl font-semibold md:font-bold ">
-            <span className="text-primary">Zoo</span>Zest
+          <h2 className="text-xl font-semibold md:font-bold uppercase">
+            <span className="">Kiddie</span> Craft
           </h2>
         </div>
         <div className="navbar-center hidden lg:flex ">
@@ -100,14 +107,14 @@ const Navbar = () => {
               </div>
               <Link to="/login">
                 {" "}
-                <button onClick={handleLogOut} className="btn-primary">
-                  Sing Out
-                </button>
+                <p onClick={handleLogOut} className="text-lg uppercase flex items-center justify-between hover:text-gray-600 hover:scale-105">
+                 Sing Out<MdOutlineLogout className="ml-3"/>
+                </p>
               </Link>
             </>
           ) : (
             <Link to="/login">
-              <button className="btn-primary">Login</button>
+              <p className="text-xl uppercase flex items-center justify-between hover:text-gray-600 hover:scale-105"><FaRegUser className="mr-2"></FaRegUser>Login</p>
             </Link>
           )}
         </div>

@@ -41,7 +41,7 @@ const router = createBrowserRouter([
       {
         path: "/allToy",
         element: <AllToy />,
-        loader: () => fetch("https://sports-verse-toys-server.vercel.app/toys"),
+        loader: () => fetch("http://localhost:5000/toys"),
       },
       {
         path: "/toys/:id",
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://sports-verse-toys-server.vercel.app/toys/${params.id}`
+            `http://localhost:5000/toys/${params.id}`
           ),
       },
       {
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
         element: <UpdateToy />,
         loader: ({ params }) =>
           fetch(
-            `https://sports-verse-toys-server.vercel.app/toys/${params.id}`
+            `http://localhost:5000/toys/${params.id}`
           ),
       },
       {
