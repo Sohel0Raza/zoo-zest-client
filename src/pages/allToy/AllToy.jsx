@@ -2,53 +2,21 @@ import { useContext } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../providers/Authprovider";
 import useTitle from "../../hooks/useTitle";
+import AllToyCard from "../../components/AllToyCard";
 
 const AllToy = () => {
   const { user } = useContext(AuthContext);
   const allToy = useLoaderData();
-  useTitle('AllToy')
+  console.log("✌️allToy --->", allToy);
+  useTitle("AllToy");
   return (
-    <div className="md:w-10/12 mx-auto my-10 px-5 md:px-0">
+    <div className="md:w-10/12 mx-auto py-20 px-5 md:px-0">
       <h2 className="font-thin text-center text-3xl">ALL TOY</h2>
       <hr className="h-1 mb-5 mt-3 w-2/6 bg-[#ffa791] mx-auto" />
-      <div className="overflow-x-auto">
-        <table className="table w-full">
-          {/* head*/}
-          <thead>
-            <tr>
-              <th>Seller Name</th>
-              <th>Toy Name</th>
-              <th>Sub Category</th>
-              <th>Price</th>
-              <th>Available Quantity</th>
-              <th></th>
-            </tr>
-          </thead>
-          {allToy.map((toy) => {
-            return (
-              <tbody key={toy._id}>
-                <tr>
-                  <td>{toy.sellerName}</td>
-                  <td>{toy.toyName}</td>
-                  <td>{toy.category}</td>
-                  <td>$ {toy.price}</td>
-                  <td>{toy.quantity}</td>
-                  {user ? (
-                    <>
-                      <Link to={`/toys/${toy._id}`}>
-                        <button className="btn-secondary">View Detail</button>{" "}
-                      </Link>
-                    </>
-                  ) : (
-                    <Link to="/login">
-                      <button className="btn-secondary">View Detail</button>{" "}
-                    </Link>
-                  )}
-                </tr>
-              </tbody>
-            );
-          })}
-        </table>
+      <div className="grid grid-cols-1 md:grid-cols-4">
+        {allToy.map((toy) => (
+          <AllToyCard key={toy._id} product={toy} />
+        ))}
       </div>
     </div>
   );

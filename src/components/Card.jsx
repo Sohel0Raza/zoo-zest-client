@@ -5,7 +5,7 @@ const Card = ({ product }) => {
   const offerPrice = (product.price - discount).toFixed(2);
   console.log("✌️offerPrice --->", offerPrice);
   return (
-    <Link to="allToy">
+    <Link to="/allToy">
       <div className="card bg-base-100">
         <div className="h-56 mx-auto">
           <img
@@ -15,7 +15,7 @@ const Card = ({ product }) => {
           />
         </div>
         <div className="card-body">
-          <h2 className="card-title text-xl text-[#4684e2]">{product.name}</h2>
+          <h2 className="card-title text-xl text-[#348691] uppercase">{product.name}</h2>
           <p className="font-semibold text-base text-[#cc3030] flex justify-start items-center">
             $ {offerPrice}{" "}
             <span className="text-gray-700 line-through ml-5">
