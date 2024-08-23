@@ -30,7 +30,7 @@ const AllToyCard = ({ product }) => {
                 <span className="text-gray-700 hover:scale-110">
                   <FaArrowRightLong />
                 </span>
-                <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 w-max px-2 py-1 bg-[#348691] text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 w-max px-2 py-1 bg-[#f3f3f3] text-black text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-[1px] border-black">
                   View Detail
                 </span>
               </div>

@@ -20,7 +20,7 @@ const Toy = () => {
           <img
             className="shadow-sm mx-auto rounded-xl"
             src={photo}
-            alt="Movie"
+            alt=""
           />
           <h2 className="font-bold pt-3">{toyName}</h2>
           <h2 className="font-semibold py-1 text-red-500">Price: ${price}</h2>

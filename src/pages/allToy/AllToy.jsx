@@ -1,13 +1,15 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../providers/Authprovider";
 import useTitle from "../../hooks/useTitle";
 import AllToyCard from "../../components/AllToyCard";
 
 const AllToy = () => {
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
   const { user } = useContext(AuthContext);
   const allToy = useLoaderData();
-  console.log("✌️allToy --->", allToy);
   useTitle("AllToy");
   return (
     <div className="md:w-10/12 mx-auto py-20 px-5 md:px-0">

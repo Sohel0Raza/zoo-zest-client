@@ -5,7 +5,7 @@ import useTitle from "../../hooks/useTitle";
 
 const AddToy = () => {
   const { user } = useContext(AuthContext);
-  useTitle('AddToy')
+  useTitle("AddToy");
   const handleAddToy = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -64,60 +64,66 @@ const AddToy = () => {
       });
   };
   return (
-    <div className="md:w-10/12 mx-auto my-10">
+    <div className="md:w-10/12 mx-auto pb-10 pt-20">
       <h2 className="font-thin text-center text-3xl">ADD NEW TOY</h2>
       <hr className="h-1 mb-5 mt-3 w-2/6 bg-[#ffa791] mx-auto" />
-      <form
-        onSubmit={handleAddToy}
-        className=" bg-slate-100 p-2 md:p-5 rounded-lg"
-      >
+      <form onSubmit={handleAddToy} className=" p-2 md:p-5">
         <div className="md:flex">
           <div className="md:w-1/2 px-5">
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Seller Name</span>
+                <span className="label-text font-semibold text-base text-[#348691] uppercase">
+                  Seller Name
+                </span>
               </label>
               <input
                 type="text"
                 name="sellerName"
-                defaultValue={user?.displayName}
-                className="input input-bordered"
+                value={user?.displayName}
+                disabled
+                className="my-input"
                 required
               />
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Seller Email</span>
+                <span className="label-text font-semibold text-base text-[#348691] uppercase">
+                  Seller Email
+                </span>
               </label>
               <input
                 type="text"
                 name="email"
-                defaultValue={user?.email}
-                className="input input-bordered"
+                value={user?.email}
+                disabled
+                className="my-input"
                 required
               />
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Sub Category</span>
+                <span className="label-text font-semibold text-base text-[#348691] uppercase">
+                  Toy Category
+                </span>
               </label>
-              <input
-                type="text"
-                name="category"
-                placeholder="Teddy or horse or dinosaur"
-                className="input input-bordered"
-                required
-              />
+              <select className="my-input" name="category" required >
+                <option value="" disabled selected>Select Category</option>
+                <option value="teddy">Teddy</option>
+                <option value="horse">Horse</option>
+                <option value="dinosaur">Dinosaur</option>
+              </select>
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Detail description</span>
+                <span className="label-text font-semibold text-base text-[#348691] uppercase">
+                  Toy description
+                </span>
               </label>
               <input
                 type="text"
                 name="description"
                 placeholder="Detail description"
-                className="input input-bordered"
+                className="my-input"
                 required
               />
             </div>
@@ -125,49 +131,57 @@ const AddToy = () => {
           <div className="md:w-1/2 px-5">
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Toy Name</span>
+                <span className="label-text font-semibold text-base text-[#348691] uppercase">
+                  Toy Name
+                </span>
               </label>
               <input
                 type="text"
                 name="toyName"
                 placeholder="Toy name"
-                className="input input-bordered"
+                className="my-input"
                 required
               />
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Price (USD)</span>
+                <span className="label-text font-semibold text-base text-[#348691] uppercase">
+                  Price (USD)
+                </span>
               </label>
               <input
                 type="text"
                 name="price"
                 placeholder="price"
-                className="input input-bordered"
+                className="my-input"
                 required
               />
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Available Quantity</span>
+                <span className="label-text font-semibold text-base text-[#348691] uppercase">
+                  Available Quantity
+                </span>
               </label>
               <input
                 type="text"
                 name="quantity"
                 placeholder="Quantity"
-                className="input input-bordered"
+                className="my-input"
                 required
               />
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Rating</span>
+                <span className="label-text font-semibold text-base text-[#348691] uppercase">
+                  Rating
+                </span>
               </label>
               <input
                 type="text"
                 name="rating"
                 placeholder="Rating"
-                className="input input-bordered"
+                className="my-input"
                 required
               />
             </div>
@@ -175,22 +189,20 @@ const AddToy = () => {
         </div>
         <div className="form-control px-5">
           <label className="label">
-            <span className="label-text">Toy Photo URL</span>
+            <span className="label-text font-semibold text-base text-[#348691] uppercase">
+              Toy Photo URL
+            </span>
           </label>
           <input
             type="text"
             name="photo"
             placeholder="Photo url"
-            className="input input-bordered"
+            className="my-input"
             required
           />
         </div>
         <div className="form-control px-5 mt-8">
-          <input
-            type="submit"
-            value="Add Toy"
-            className="btn-primary w-full"
-          />
+          <input type="submit" value="Add Toy" className="btn-primary w-full" />
         </div>
       </form>
     </div>

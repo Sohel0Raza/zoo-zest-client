@@ -17,3 +17,6 @@
   .btn-outlined{
     @apply transition duration-200  shadow-xl shadow-black md:mb-0  px-2 py-1 md:px-6 md:py-2 rounded text-white hover:bg-amber-400 hover:border-transparent border-2 border-[#0a0a0a]
   }
+  .my-input{
+    @apply p-2 shadow-inner shadow-black outline-none focus:bg-[#e0dede] text-lg mb-2
+  }
