@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import { FcRating } from "react-icons/fc";
+import Card from "../../../components/Card";
 
 const ShopCategory = () => {
   //teddy dataload
@@ -43,83 +43,22 @@ const ShopCategory = () => {
 
         <TabPanel>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-5">
-            {teddys.map((teddy) => (
-              <div key={teddy._id}>
-                <div className="card bg-base-100 shadow-xl">
-                  <div className="h-56 mx-auto">
-                    <img
-                      className="w-full h-full p-5"
-                      src={teddy.picture}
-                      alt="teddy"
-                    />
-                  </div>
-                  <div className="card-body">
-                    <h2 className="card-title text-2xl">{teddy.name}</h2>
-                    <p className="font-semibold">Price: $ {teddy.price}</p>
-                    <p className="font-medium flex items-center">
-                      Rating: {teddy.rating}
-                      <FcRating className="ml-1" />
-                    </p>
-                    <div className="card-actions justify-end">
-                      <button className="btn-primary">View Details</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {teddys.map(teddy => (
+              <Card key={teddy._id} product={teddy} />
             ))}
           </div>
         </TabPanel>
         <TabPanel>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-5">
-            {horses.map((horse) => (
-              <div key={horse._id}>
-                <div className="card bg-base-100 shadow-xl">
-                  <div className="h-56 mx-auto">
-                    <img
-                      className="w-full h-full p-5"
-                      src={horse.picture}
-                      alt="teddy"
-                    />
-                  </div>
-                  <div className="card-body">
-                    <h2 className="card-title text-2xl">{horse.name}</h2>
-                    <p className="font-semibold">Price: $ {horse.price}</p>
-                    <p className="font-medium flex items-center">
-                      Rating: {horse.rating} <FcRating className="ml-1" />
-                    </p>
-                    <div className="card-actions justify-end">
-                      <button className="btn-primary">View Details</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {horses.map(horse => (
+              <Card key={horse._id} product={horse} />
             ))}
           </div>
         </TabPanel>
         <TabPanel>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-5">
-            {dinosaurs.map((dinosaur) => (
-              <div key={dinosaur._id}>
-                <div className="card bg-base-100 shadow-xl">
-                  <div className="h-56 mx-auto">
-                    <img
-                      className="w-full h-full p-5"
-                      src={dinosaur.picture}
-                      alt="teddy"
-                    />
-                  </div>
-                  <div className="card-body">
-                    <h2 className="card-title text-2xl">{dinosaur.name}</h2>
-                    <p className="font-semibold">Price: $ {dinosaur.price}</p>
-                    <p className="font-medium flex items-center">
-                      Rating: {dinosaur.rating} <FcRating className="ml-1" />
-                    </p>
-                    <div className="card-actions justify-end">
-                      <button className="btn-primary">View Details</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {dinosaurs.map(dinosaur => (
+              <Card key={dinosaur._id} product={dinosaur} />
             ))}
           </div>
         </TabPanel>
