@@ -14,17 +14,17 @@ const MyToys = () => {
       .then((data) => setMyToys(data));
   }, [url]);
   return (
-    <div className="md:w-10/12 mx-auto my-10 px-5 md:px-0">
+    <div className="md:w-10/12 mx-auto pb-10 pt-20 px-5 md:px-0">
       <h2 className="font-thin text-center text-3xl">MY TOY</h2>
       <hr className="h-1 mb-5 mt-3 w-2/6 bg-[#ffa791] mx-auto" />
-      <div className="overflow-x-auto">
-        <table className="table w-full">
+      <div className="overflow-x-auto ">
+        <table className="table w-full text-center">
           {/* head*/}
           <thead>
             <tr>
               <th>Seller Name</th>
               <th>Toy Name</th>
-              <th>Sub Category</th>
+              <th>Category</th>
               <th>Price</th>
               <th>Available Quantity</th>
               <th></th>

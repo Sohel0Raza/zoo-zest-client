@@ -1,5 +1,5 @@
-import { FcRating } from "react-icons/fc";
 import { useLoaderData } from "react-router-dom";
+import ReactStars from "react-rating-stars-component";
 
 const Toy = () => {
   const toy = useLoaderData();
@@ -13,35 +13,43 @@ const Toy = () => {
     rating,
     quantity,
   } = toy;
+  const discount = (price * 15) / 100;
+  const offerPrice = (price - discount).toFixed(2);
   return (
-    <div className="md:w-9/12 mx-auto mt-10">
-      <div className="md:flex items-center bg-base-100 shadow-xl">
+    <div className="md:w-9/12 mx-auto pt-20">
+      <div className="md:flex items-center">
         <div className="py-5 md:w-1/2 text-center">
-          <img
-            className="shadow-sm mx-auto rounded-xl"
-            src={photo}
-            alt=""
-          />
-          <h2 className="font-bold pt-3">{toyName}</h2>
-          <h2 className="font-semibold py-1 text-red-500">Price: ${price}</h2>
+          <img className="shadow-sm mx-auto rounded-xl" src={photo} alt="" />
+          <h2 className="font-semibold pt-3">{toyName}</h2>
+          <h2 className="font-medium py-1 text-red-500">
+            Price: ${offerPrice}
+          </h2>
         </div>
         <div className="md:w-1/2 px-7 pb-5 md:p-0">
           <p>
-            <span className="font-bold">Description: </span>
+            <span className="font-semibold">Description: </span>
             {description}
           </p>
           <p className="flex items-center">
-            <span className="font-bold">Rating: </span>
-            {rating}
-            <FcRating className="ml-1" />
+            <span className="font-semibold flex items-center space-x-4">
+              <span>Rating:</span>
+              <ReactStars
+                count={rating}
+                size={24}
+                activeColor="#ffd700"
+                value={rating}
+                edit={false}
+              />
+            </span>
           </p>
           <p>
-            <span className="font-bold">Available Quantity</span> {quantity}
+            <span className="font-semibold">Available Quantity: </span>{" "}
+            {quantity}
           </p>
-          <h2 className="text-xl mt-3">
+          <h2 className="text-lg mt-3">
             <span className="font-semibold">Seller Name:</span> {sellerName}
           </h2>
-          <h2 className="text-xl">
+          <h2 className="text-lg">
             <span className="font-semibold">Email:</span> {sellerEmail}
           </h2>
         </div>

@@ -85,7 +85,7 @@ const Navbar = () => {
           <div className="navbar-center w-3 h-3 md:w-12 md:h-12 rounded-lg md:ml-20 mr-2">
             <img src={logo} alt="" />
           </div>
-          <h2 className="text-xl font-semibold md:font-bold uppercase">
+          <h2 className="text-sm md:text-xl font-semibold md:font-bold uppercase">
             <span className="text-[#ffa791]">Kiddie</span> Craft
           </h2>
         </div>

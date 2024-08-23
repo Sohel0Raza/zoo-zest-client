@@ -34,27 +34,26 @@ const MyToy = ({ toy, myToys, setMyToys }) => {
   };
   return (
     <tbody key={toy._id}>
-      <tr>
+      <tr className="bg-white ">
         <td>{sellerName}</td>
         <td>{toyName}</td>
         <td>{category}</td>
         <td>$ {price}</td>
         <td>{quantity}</td>
-        <div className="space-x-4 mt-3">
+        <div className="space-x-4 flex mt-3 pl-5 text-2xl">
           <Link to={`/toys/${toy._id}`}>
-            <button className="p-1 rounded-md hover:btn-success">
+            <button className="p-1 rounded-md hover:scale-90" title="View Details">
               <FcViewDetails />
             </button>
           </Link>
           <Link to={`/updateToy/${_id}`}>
-            {" "}
-            <button className="p-1 rounded-md hover:btn-accent">
+            <button className="p-1 rounded-md hover:scale-90" title="Update Toy">
               <GrUpdate />
             </button>
           </Link>
           <button
             onClick={() => handleDetete(_id)}
-            className="p-1 rounded-md hover:btn-error"
+            className="p-1 rounded-md hover:scale-90" title="Delete Toy"
           >
             <AiFillDelete />
           </button>

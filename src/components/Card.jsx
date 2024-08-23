@@ -6,7 +6,7 @@ const Card = ({ product }) => {
   console.log("✌️offerPrice --->", offerPrice);
   return (
     <Link to="/allToy">
-      <div className="card bg-base-100">
+      <div className="card bg-base-100 rounded-sm p-0">
         <div className="h-56 mx-auto">
           <img
             className="w-full h-full px-5 pt-5 hover:scale-110"

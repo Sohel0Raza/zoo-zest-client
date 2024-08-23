@@ -6,7 +6,7 @@ const AllToyCard = ({ product }) => {
   const offerPrice = (product.price - discount).toFixed(2);
   return (
     <>
-      <div className="card bg-base-100 rounded-none border-b-2 border-l-2">
+      <div className="card bg-base-100 rounded-none border-b-2 md:border-l-2">
         <div className="h-56 mx-auto">
           <img
             className="w-full h-full px-5 pt-6 hover:transition-scale hover:duration-500 hover:ease-linear hover:scale-125"

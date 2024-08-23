@@ -64,7 +64,7 @@ const AddToy = () => {
       });
   };
   return (
-    <div className="md:w-10/12 mx-auto pb-10 pt-20">
+    <div className="md:w-10/12 mx-auto pb-10 pt-20 px-5">
       <h2 className="font-thin text-center text-3xl">ADD NEW TOY</h2>
       <hr className="h-1 mb-5 mt-3 w-2/6 bg-[#ffa791] mx-auto" />
       <form onSubmit={handleAddToy} className=" p-2 md:p-5">
